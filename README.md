@@ -1,4 +1,4 @@
-# 외국인 관광객 대상 국악 합주 생성 AI 서비스 '하모예' (HARMO-YEAH: Fusion Korean Traditional Music Ensemble Generation AI Service for Foreign Tourists)
+# 하모예: 외국인 관광객 대상 국악 합주 생성 AI 서비스 (HARMO-YEAH: Fusion Korean Traditional Music Ensemble Generation AI Service for Foreign Tourists)
 
 
 
