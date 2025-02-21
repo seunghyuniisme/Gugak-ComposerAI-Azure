@@ -4,6 +4,8 @@
 
 
 
+
+
 ## :pushpin: 프로젝트의 목표 및 필요성 (Project Goal & Necessity)
 
 
@@ -11,6 +13,14 @@
 
 
 ## :pushpin: 활용 기술 (Tech)
+
+## 🛠 Tech Stack
+- **Backend:** Python (Flask), FastAPI, Node.js (Express)
+- **Frontend:** React.js, Next.js, Tailwind CSS
+- **Database:** PostgreSQL, MongoDB, Firebase
+- **Cloud & Deployment:** Azure, AWS, Vercel, Docker
+- **AI & ML:** OpenAI API, TensorFlow, PyTorch, Azure Custom Vision
+- **Version Control:** Git, GitHub Actions
 
 
 ## :pushpin: 실행 화면 (Result)
