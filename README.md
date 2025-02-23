@@ -1,13 +1,10 @@
 # 🔈 하모예: 퓨전 국악 합주 생성 서비스 (HARMO-YEAH: AI-Powered Korean Traditional Music Ensemble Generator)
 
-
-## 프로젝트 정보 (Project Info)
 > **프로젝트 (Project):** MS AI School 4기 최종 팀 프로젝트   
 > **개발기간 (Development Period):** September 2024 – October 2024
 
 
 ## 팀 소개 (Team)
-> **덩기덕쿵더러러**   
 > 민정, 서진, 수정, 승현, 재홍, 예연
 
 
