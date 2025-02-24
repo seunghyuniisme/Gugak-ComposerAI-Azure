@@ -15,7 +15,7 @@
 
 
 ## 📌 기술 스택 (Tech Stack)
-### AI Model 
+### Model 
 - **Automated Transcription Model:** Omnizart libsora, PrettyMIDI 
 - **Audio Processing:** subprocess, pydub, random 
 
