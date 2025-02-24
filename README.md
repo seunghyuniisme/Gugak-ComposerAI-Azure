@@ -8,7 +8,7 @@
 > 민정, 서진, 수정, 승현, 재홍, 예연
 
 
-## 📌 프로젝트 설명 (Project Description)
+## 📌 프로젝트 소개 (Project Description)
 
 
 
