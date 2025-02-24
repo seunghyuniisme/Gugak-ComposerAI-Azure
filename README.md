@@ -43,8 +43,8 @@ AI-Hub (https://www.aihub.or.kr/)
 
 
 ## 기타 추가 사항 (Notes)
-> 이 서비스는 **Microsoft Azure** 서비스가 활용되었습니다. 
+> 이 서비스는 **Microsoft Azure** 서비스가 활용되었습니다.   
 > **Azure**의 **API 키**와 **Endpoint** 값이 필요합니다.
 
-This service utilizes **Microsoft Azure**. 
-**Azure API Key** and **Endpoint** are required for proper functionality.
+> This service utilizes **Microsoft Azure**.  
+> **Azure API Key** and **Endpoint** are required for proper functionality.
