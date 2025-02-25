@@ -1,8 +1,8 @@
-# 🔈 하모예: 퓨전 국악 합주 생성 서비스 (HARMO-YEAH: AI-Powered Korean Traditional Music Ensemble Generator)
+# 🔈 하모예 (HARMO-YEAH)
 
-
-![Image](https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85)
-
+<div align="center">
+  ![Image](https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85)
+</div>
 
 > **프로젝트 (Project):** MS AI School 4기 최종 팀 프로젝트   
 > **개발기간 (Development Period):** September 2024 – October 2024
