@@ -1,0 +1,59 @@
+/*예외처리 화면*/
+
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+
+* {
+    font-family: "Gowun Dodum", sans-serif;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBF5;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container {
+    text-align: center;
+    background-color: #FFFBF5;
+    padding: 50px;
+    border-radius: 10px;
+    width: 1500px;
+    height: 700px;
+    position: relative;
+}
+
+.error-message h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.error-message p {
+    font-size: 30px;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background-color: #f7b500;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #e6a100;
+}

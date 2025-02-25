@@ -1,0 +1,184 @@
+/*튜토리얼 화면*/
+
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+* {
+    font-family: "Gowun Dodum", sans-serif;
+  }
+  
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFFBF5;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    object-fit: fill;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #333;
+}
+
+
+.slider-container {
+    position: relative;
+    width: 65%;
+    height: 500px;
+    border: 1vh solid transparent;
+    background-color: #FFFBF5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img, .button-slide {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+
+.slides button-slide {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.create-button-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    text-decoration: none;
+}
+
+
+.create-button {
+    /* transform: translateX(-50%, -50%); */
+    font-size: 2vw;
+    padding: 2vh 2.5vw;
+    background-color: #f7b500;
+    border: none;
+    border-radius: 3vh;
+    cursor: pointer;
+    color: white;
+    display: none; /* 처음엔 버튼이 보이지 않도록 설정 */
+    text-decoration: none;
+}
+
+.create-button:hover {
+    background-color: #e0a000;
+    text-decoration: none;
+}
+
+.arrow {
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    padding: 2vh;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.589);
+}
+
+.arrow.left {
+    top: 50%;
+    left: 2vw;
+    display: none;
+
+}
+
+.arrow.right {
+    top: 45%;
+    right: 2vw;
+    transform: scaleX(-1);
+}
+
+.arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.slide-arrow {
+    width: 50px; /* 너비 설정 */
+    height: 50px; /* 높이 설정 */
+    /* 추가적인 스타일이 필요하면 여기에 추가할 수 있습니다. */
+}
+
+.back-button {
+        position: absolute;
+        top: 10vh;  /* 상단 모서리 근처로 위치 */
+        left: 5vw; /* 왼쪽 모서리 근처로 위치 */    
+        background-color: #f7b500;    
+        border: none;    
+        padding: 10px;    
+        width: 5vw;  /* 원 버튼의 너비 */    
+        height: 5vw; /* 원 버튼의 높이 */    
+        border-radius: 50%; /* 원 모양으로 만들기 */    
+        display: flex;    
+        justify-content: center;    
+        align-items: center;    
+        cursor: pointer;}
+        
+.back-icon {    
+    width: 50%;  /* 아이콘 너비 */    
+    height: 50%; /* 아이콘 높이 */    
+    object-fit: contain; /* 이미지 크기에 맞게 조정 */}
+
+.info-button {
+    margin-top: 2vh;
+    font-size: 1.5vw;
+    padding: 2vh 3vw;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 1vh;
+    cursor: pointer;
+}
+
+.info-button:hover {
+    background-color: #555;
+}

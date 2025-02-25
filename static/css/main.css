@@ -1,0 +1,152 @@
+/*시작(메인) 화면*/
+@font-face {
+    font-family: 'EF_jejudoldam';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-EF@1.0/EF_jejudoldam.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 변경 전 폰트 */
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+
+* {
+    font-family: "EF_jejudoldam", sans-serif;
+  }
+  
+
+body {
+    background-color: #FFFBF5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    object-fit: fill;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    text-align: center;
+    padding: 5vw; /* 화면 크기에 맞춰 내부 여백 설정 */
+}
+
+
+.korean-text {
+    font-size: 7vw; /* 한글 글씨 크기 */
+    margin-bottom: 3vh; /* 화면 높이에 비례한 간격 */
+    font-family: 'EF_jejudoldam', sans-serif;
+}
+
+.english-text {
+    font-size: 2vw; /* 영어 글씨 크기 */
+    margin-bottom: 3vh; /* 화면 높이에 비례한 간격 */
+    margin-top: 3vh;
+    font-family: 'EF_jejudoldam', sans-serif;
+    color: #4c4c4c;
+}
+
+.start {
+    background-color: #f7b500;
+    border: none;
+    padding: 2vh 5vw; /* 버튼의 패딩도 화면 비율에 맞게 설정 */
+    font-size: 2.5vw; /* 화면 크기에 맞춰 유동적으로 조정 */
+    color: white;
+    border-radius: 1.5vw; /* 둥근 모서리도 화면 크기에 맞춰 조정 */
+    cursor: pointer;
+    margin-top: 2vh; /* 화면 크기에 맞춘 마진 */
+    z-index: 1;
+    font-family: 'Gowun Dodum', sans-serif;
+}
+
+.start:hover {
+    background-color: #e6a100;
+}
+
+.image-right1 {
+    position: absolute;
+    bottom: 13vh; /* 화면 높이에 맞춘 간격 */
+    right: 13vw; /* 화면 너비에 맞춘 간격 */
+    z-index: 1;
+    width: 15vw; /* 이미지 크기도 화면 너비에 맞춰 조정 */
+    height: auto;
+}
+
+.image-right2 {
+    position: absolute;
+    bottom: 18vh; /* image-right1과 동일한 간격 */
+    left: 12vw; /* 화면 너비에 맞춘 간격 */
+    z-index: 1;
+    width: 15vw; /* 이미지 크기도 화면 너비에 맞춰 조정 */
+    height: auto;
+}
+
+.language-select {
+    position: absolute;
+    top: 10vh; /* 화면 크기에 맞춘 위치 */
+    right: 5vw; /* 화면 크기에 맞춘 위치 */
+    z-index: 1;
+    cursor: pointer;
+}
+
+.language-options {
+    display: flex;
+    gap: 1vw; /* 간격을 화면 너비에 맞춰 설정 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+    z-index: 1;
+}
+
+.language-options.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.language-option {
+    text-align: center;
+}
+
+.language-option p {
+    font-family: "Gowun Dodum", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.circle-image-large {
+    width: 4vw; /* 아이콘 크기도 화면 너비에 맞춰 설정 */
+    height: 4vw; /* 화면 크기에 맞춰 유동적으로 조정 */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2vw solid black; /* 테두리도 화면 크기에 맞춰 설정 */
+    cursor: pointer;
+}

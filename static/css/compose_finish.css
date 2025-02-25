@@ -1,0 +1,167 @@
+/* 합주 생성 화면 (5.합주생성 완료 부분) */
+
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+* {
+    font-family: "Gowun Dodum", sans-serif;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f4eb;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    object-fit: fill;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px; /* 제목 아래 여백 */
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;  /* 전체 화면을 차지하도록 수정 */
+    height: 50%; /* container가 화면 전체 높이를 차지하도록 설정 */
+    padding: 20px;
+}
+
+.image-left {
+    position: absolute;
+    bottom: 25vh; /* 화면 높이에 맞춘 간격 */
+    left: 20vw; /* 화면 너비에 맞춘 간격 */
+    z-index: 1;
+    width: 13vw; /* 이미지 크기도 화면 너비에 맞춰 조정 */
+    height: auto;
+}
+
+.image-right {
+    position: absolute;
+    bottom: 20vh; /* 화면 높이에 맞춘 간격 */
+    right: 18vw; /* 화면 너비에 맞춘 간격 */
+    z-index: 1;
+    width: 15vw; /* 이미지 크기도 화면 너비에 맞춰 조정 */
+    height: auto;
+}
+/* 재생 버튼 스타일 */
+.play-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -100px;
+}
+
+.play-button img {
+    width: 210px;
+    height: 210px;
+}
+
+.play-icon {
+    width: 100px;  /* 플레이 아이콘 크기 */
+    height: 100px; /* 플레이 아이콘 크기 */
+    object-fit: contain; /* 이미지 크기에 맞춰 조정 */
+}
+
+.share-info {
+    margin-top: -20px;
+    font-weight: bold;
+    font-size: 24px; 
+    color: #333;
+    text-align: center;
+}
+
+/* 아이콘을 담을 컨테이너 */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* 텍스트와 아이콘 사이 여백 */
+}
+
+/*QR코드 컨테이너*/
+.qr-code-container {
+    margin: 20px auto; /* 중앙 정렬을 위한 auto 마진 */
+    width: 100px; /* QR 코드 크기와 일치 */
+    height: 100px;
+    padding: 10px; /* QR 코드와 주변 간격 */
+    border: 2px solid #ddd; /* 테두리 추가 */
+    border-radius: 10px; /* 둥근 모서리 */
+    background-color: #f9f9f9; /* 배경색 */
+    position: relative; /* 위치 변경을 위한 relative 설정 */
+    left: -70px; /* 왼쪽으로 70px 이동 */
+}
+
+/* 공유 아이콘 스타일 */
+.share-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 15px; /* 아이콘 사이 간격 */
+    object-fit: contain;
+}
+
+/* 인스타그램 아이콘 크기 조정 */
+.insta-icon {
+    width: 80px;  /* 인스타그램 아이콘 크기만 키움 */
+    height: 80px;
+    position: relative; /* 위치 변경을 위한 relative 설정 */
+    left: -20px; /* 왼쪽으로 70px 이동 */
+}
+
+.flowchart-button {
+    position: fixed;
+    bottom: 6vw;   /* 화면 하단에서 2vw 만큼 떨어지도록 설정 */
+    right: 6vw;    /* 화면 오른쪽에서 2vw 만큼 떨어지도록 설정 */
+    background-color: #f7b500; /* 버튼 배경색 */
+    color: white;  /* 글자 색 */
+    padding: 20px 30px; /* 버튼 내부 여백 */
+    border: none; 
+    border-radius: 8px; /* 둥근 모서리 */
+    font-size: 1.5rem; /* 글자 크기 */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* 링크 밑줄 제거 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.flowchart-button:hover {
+    background-color: #e6a100; /* 호버 시 색상 변경 */
+}
+
+.home-button {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    cursor: pointer;
+    z-index: 100;
+}

@@ -1,0 +1,68 @@
+/* 서비스 구조도*/
+
+.gowun-dodum-regular {
+    font-family: "Gowun Dodum", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } 
+
+* {
+    font-family: "Gowun Dodum", sans-serif;
+  }
+
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #FFFBF5;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    object-fit: fill;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.title {
+    font-size: 3vw;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.back-button {
+    position: absolute;
+    top: 10vh;  /* 상단 모서리 근처로 위치 */
+    left: 5vw; /* 왼쪽 모서리 근처로 위치 */    
+    background-color: #f7b500;    
+    border: none;    
+    padding: 10px;    
+    width: 5vw;  /* 원 버튼의 너비 */    
+    height: 5vw; /* 원 버튼의 높이 */    
+    border-radius: 50%; /* 원 모양으로 만들기 */    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    cursor: pointer;}
+    
+.back-icon {    
+    width: 50%;  /* 아이콘 너비 */    
+    height: 50%; /* 아이콘 높이 */    
+    object-fit: contain; /* 이미지 크기에 맞게 조정 */}
+
