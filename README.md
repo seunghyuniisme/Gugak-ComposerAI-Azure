@@ -63,8 +63,8 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 | ![녹음 페이지](https://github.com/user-attachments/assets/d4e5b49a-c712-428a-9d08-56d1dae51740) |
 | <div align="center"><b>최종 결과 페이지 (Final Ensemble Result Page)</b></div> |
 | ![최종결과 페이지](https://github.com/user-attachments/assets/f4b1253f-4cad-4640-a830-d0927370c664) |
-| <div align="center"><b>기술 흐름도 페이지 (Technical Flow Page)</b></div> |
-| ![기술흐름 페이지](https://github.com/user-attachments/assets/bf2c9380-74d3-4a7f-baf5-0e7209413e21) |
+| <div align="center"><b>기술 흐름도 (Technical Flow)</b></div> |
+| ![기술흐름 페이지](https://github.com/user-attachments/assets/6f2de9b5-f116-4b56-8f29-e42c86a89618) |
 
 
 
