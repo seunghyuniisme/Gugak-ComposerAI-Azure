@@ -51,19 +51,19 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 
 
 ## 📌 실행 화면 (Final Output)
-| 메인 페이지 (Main Page) |
+| <div align="center">메인 페이지 (Main Page)</div> |
 |---|
 | ![메인 페이지](https://github.com/user-attachments/assets/a05b6fc3-2a7e-48a2-9a5b-600f99409084) |
-| **튜토리얼 페이지 (Tutorial Page)** |
+| <div align="center"><b>튜토리얼 페이지 (Tutorial Page)</b></div> |
 | ![튜토리얼 페이지](https://github.com/user-attachments/assets/76e108f6-4704-4141-a2cb-1d84db329b61) |
-| 악기설명 페이지 (Instrument Description Page) |
+| <div align="center">악기설명 페이지 (Instrument Description Page)</div> |
 | ![악기설명 페이지](https://github.com/user-attachments/assets/737941b3-a8c6-4110-8f71-c56e71b5f1b8) |
-| 녹음 페이지 (Recording Page) |
-| ![녹음 페이지](https://github.com/user-attachments/assets/eb3e057d-86f1-45ef-a132-6c5446197327)
-![녹음 페이지](https://github.com/user-attachments/assets/2ecd3c91-3434-4fd4-9338-19e032e075db)|
+| <div align="center">녹음 페이지 (Recording Page)</div> |
+| ![녹음 페이지](https://github.com/user-attachments/assets/eb3e057d-86f1-45ef-a132-6c5446197327) ![녹음 페이지](https://github.com/user-attachments/assets/2ecd3c91-3434-4fd4-9338-19e032e075db) |
 | ![녹음 페이지](https://github.com/user-attachments/assets/d4e5b49a-c712-428a-9d08-56d1dae51740) |
-| 최종 결과 페이지 (Final Ensemble Result Page) |
+| <div align="center">최종 결과 페이지 (Final Ensemble Result Page)</div> |
 | ![최종결과 페이지](https://github.com/user-attachments/assets/f4b1253f-4cad-4640-a830-d0927370c664) |
+
 
 
 ## 📌 주요 기능 (Key Features)
