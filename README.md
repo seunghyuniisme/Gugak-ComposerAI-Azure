@@ -38,7 +38,7 @@ Tourists can play traditional Korean instruments and create their own melodies, 
   
   
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85" width="400" alt="설명">
+  <img src="https://github.com/user-attachments/assets/6f2de9b5-f116-4b56-8f29-e42c86a89618" width="400" alt="기술흐름도">
 </div>
 
 
@@ -56,13 +56,15 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 | ![메인 페이지](https://github.com/user-attachments/assets/a05b6fc3-2a7e-48a2-9a5b-600f99409084) |
 | <div align="center"><b>튜토리얼 페이지 (Tutorial Page)</b></div> |
 | ![튜토리얼 페이지](https://github.com/user-attachments/assets/76e108f6-4704-4141-a2cb-1d84db329b61) |
-| <div align="center">악기설명 페이지 (Instrument Description Page)</div> |
+| <div align="center"><b>악기설명 페이지 (Instrument Description Page)</b></div> |
 | ![악기설명 페이지](https://github.com/user-attachments/assets/737941b3-a8c6-4110-8f71-c56e71b5f1b8) |
-| <div align="center">녹음 페이지 (Recording Page)</div> |
+| <div align="center"><b>녹음 페이지 (Recording Page)</b></div> |
 | ![녹음 페이지](https://github.com/user-attachments/assets/eb3e057d-86f1-45ef-a132-6c5446197327) ![녹음 페이지](https://github.com/user-attachments/assets/2ecd3c91-3434-4fd4-9338-19e032e075db) |
 | ![녹음 페이지](https://github.com/user-attachments/assets/d4e5b49a-c712-428a-9d08-56d1dae51740) |
-| <div align="center">최종 결과 페이지 (Final Ensemble Result Page)</div> |
+| <div align="center"><b>최종 결과 페이지 (Final Ensemble Result Page)</b></div> |
 | ![최종결과 페이지](https://github.com/user-attachments/assets/f4b1253f-4cad-4640-a830-d0927370c664) |
+| <div align="center"><b>기술 흐름도 페이지 (Technical Flow Page)</b></div> |
+| ![기술흐름 페이지](https://github.com/user-attachments/assets/bf2c9380-74d3-4a7f-baf5-0e7209413e21) |
 
 
 
