@@ -62,27 +62,27 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 
 
 ## 📌 주요 기능 (Key Features)
-### 1️⃣ 전통 악기 녹음 및 분석
+### 1️⃣ 전통 악기 녹음 및 분석 (Traditional Instrument Recording & Analysis)
 - 사용자가 직접 전통 악기 연주 녹음 가능  
 - 배경 소음 제거 및 특정 악기 소리 분리  
 
-### 2️⃣ 채보 (악보) 생성
+### 2️⃣ 채보 (악보) 생성 (Score (Sheet Music) Generation)
 - 녹음된 WAV 파일을 MIDI로 변환  
 - 자동으로 악보 데이터 생성  
 
-### 3️⃣ AI 기반 반주 생성
+### 3️⃣ AI 기반 반주 생성 (AI-Based Accompaniment Generation)
 - MIDI 파일을 기반으로 자동 반주 생성  
 - 한국 전통 악기(소고)와 조화로운 퓨전 음악 제작  
 
-### 4️⃣ 최종 합주 음원 제공
+### 4️⃣ 최종 합주 음원 제공 (Final Ensemble Audio Output)
 - MIDI + 반주를 병합하여 WAV 파일로 변환  
 - 완성된 퓨전 국악 합주를 감상 가능   
 
-### 5️⃣ AI 챗봇 및 음성 안내 (TTS)
+### 5️⃣ AI 챗봇 및 음성 안내 (AI Chatbot & Voice Guidance-TTS)
 - 국악 악기 설명 및 사용법 안내  
 - 다국어 지원 가능한 TTS 서비스
 
-### 6️⃣ 관광객을 위한 언어별 페이지
+### 6️⃣ 관광객을 위한 언어별 페이지 (Multi-Language Pages for Tourists)
 - 한국어, 영어, 일본어, 중국어
 
 
