@@ -38,7 +38,7 @@ Tourists can play traditional Korean instruments and create their own melodies, 
   
   
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6f2de9b5-f116-4b56-8f29-e42c86a89618" width="400" alt="기술흐름도">
+  <img src="https://github.com/user-attachments/assets/6f2de9b5-f116-4b56-8f29-e42c86a89618" width="600" alt="기술흐름도">
 </div>
 
 
