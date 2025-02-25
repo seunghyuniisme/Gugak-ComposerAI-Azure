@@ -35,6 +35,13 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 
 ### Collaboration Tool
 - Microsoft Teams, Notion
+  
+  
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85" width="400" alt="설명">
+</div>
+
+
 
 
 ## 📌 데이터 출처 (Data Sources)
@@ -44,10 +51,10 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 
 
 ## 📌 실행 화면 (Final Output)
-| 메인 페이지 (Main Page) | 헤더2 |
-|---|---|
-| 값1 | 값2 |
-| 값4 | 값5 |
+| 메인 페이지 (Main Page) |
+|---|
+| ![메인 페이지](https://github.com/user-attachments/assets/a05b6fc3-2a7e-48a2-9a5b-600f99409084) |
+| 값4 |
 
 
 ## 📌 주요 기능 (Key Features)
