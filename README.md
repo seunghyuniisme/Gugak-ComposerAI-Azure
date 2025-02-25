@@ -4,14 +4,11 @@
   <img src="https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85" width="400" alt="설명">
 </div>
 
+
+## 📌 프로젝트 정보 (Project Info)
 > **프로젝트 (Project):** MS AI School 4기 최종 팀 프로젝트   
 > **개발기간 (Development Period):** September 2024 – October 2024
-
-
-
-
-## 📌 팀 소개 (Team)
-> 민정, 서진, 수정, 승현, 재홍, 예연
+> 팀원 : 민정, 서진, 수정, 승현, 재홍, 예연
 
 
 ## 📌 프로젝트 소개 (Project Description)
