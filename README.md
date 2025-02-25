@@ -32,9 +32,9 @@
 
 
 ## 📌 데이터 출처 (Data Sources)
-#### AI-Hub (https://www.aihub.or.kr/) 
-- **Korean Traditional Music Audio & Score Dataset** (국악 음원 및 악보 데이터) 
-- **Korean Popular Music Loop Sound Dataset** (한국 대중음악 루프 사운드 데이터)  
+### AI-Hub (https://www.aihub.or.kr/) 
+  - **국악 음원 및 악보 데이터 (Korean Traditional Music Audio & Score Dataset)** 
+  - **한국 대중음악 루프 사운드 데이터 (Korean Popular Music Loop Sound Dataset)**  
 
 
 ## 📌 실행 화면 (Final Output)
@@ -49,7 +49,7 @@
 
 
 ## 📌 기타 추가 사항 (Notes)
-> 이 서비스는 **Microsoft Azure** 서비스가 활용되었습니다.   
+> 이 서비스는 **Microsoft Azure**가 활용되었습니다.   
 > **Azure**의 **API 키**와 **Endpoint** 값이 필요합니다.
 
 > This service utilizes **Microsoft Azure**.  
