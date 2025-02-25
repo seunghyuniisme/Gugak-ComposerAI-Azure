@@ -1,7 +1,7 @@
 # 🔈 하모예 (HARMO-YEAH)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85" width="300" alt="설명">
+  <img src="https://github.com/user-attachments/assets/6fb9e564-05de-431b-9946-62d84e520e85" width="400" alt="설명">
 </div>
 
 > **프로젝트 (Project):** MS AI School 4기 최종 팀 프로젝트   
