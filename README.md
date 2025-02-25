@@ -36,13 +36,6 @@ Tourists can play traditional Korean instruments and create their own melodies, 
 ### Collaboration Tool
 - Microsoft Teams, Notion
   
-  
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/6f2de9b5-f116-4b56-8f29-e42c86a89618" width="600" alt="기술흐름도">
-</div>
-
-
-
 
 ## 📌 데이터 출처 (Data Sources)
 ### AI-Hub (https://www.aihub.or.kr/) 
