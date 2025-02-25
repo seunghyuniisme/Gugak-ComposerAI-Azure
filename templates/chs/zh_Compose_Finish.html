@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합주생성 완료 화면</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compose_finish.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <img class="screen" src="img/배경테두리.png">
+    <h1 class="title">🎶합주 음원이 다 만들어졌어요🎶</h1>
+    <div class="container">
+        <div class="play-button">
+            <img src="img/play_icon.png" alt="재생버튼" class="play-icon">
+        </div>
+    </div>
+    <p class="share-info">💾 완성된 음원을 사람들과 공유해 보세요</p>
+
+    <div class="icon-container">
+        <div id="qrcode" class="qr-code-container"></div> <!-- QR 코드가 삽입될 부분 -->
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta_icon_c.png" alt="인스타그램" class="share-icon insta-icon">
+        </a>
+        <a href="https://x.com/?lang=ko" target="_blank">
+            <img src="img/x_icon.png" alt="트위터" class="share-icon">
+        </a>
+    </div>
+    <img class="image-right" src="img/가야금캐릭터.png" alt="이미지(오)" width="300">
+    <img class="image-left" src="img/장구캐릭터.png" alt="이미지(왼)" width="300">
+    <script>
+        // QR 코드 생성
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://your-link-here.com",  // QR 코드가 나타낼 링크
+            width: 100,
+            height: 100
+        });
+    </script>
+</body>
+</html>

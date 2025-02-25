@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합주 생성 화면</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/compose_start.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script>
+        let mediaRecorder, audioChunks = [], recordingTimeout, audioBlob, audioUrl;
+
+        // 뒤로가기 버튼 클릭 시 이전 페이지로 돌아감
+        function goBack() {
+            window.history.back();
+        }
+
+        // 녹음 시작 함수
+        function startRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.ondataavailable = event => audioChunks.push(event.data);
+
+                    mediaRecorder.onstop = () => {
+                        audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        audioUrl = URL.createObjectURL(audioBlob);
+                        const audio = new Audio(audioUrl);
+                    };
+
+                    mediaRecorder.start();
+                    console.log('녹음 시작');
+                    recordingTimeout = setTimeout(pauseOrStopRecording, 30000); // 30초 후 자동 정지
+
+                    // UI 상태 업데이트
+                    smoothTransition('.record-button', '.pause-button');
+                    document.querySelector('.title').style.display = 'none';
+                    document.querySelector('.recording-message').style.display = 'block';
+                    document.querySelector('.next-button').style.display = 'none';
+                    document.getElementById('beatSample').style.display = 'none';
+                    document.querySelector('.trigger-image').style.display = 'none';
+                    document.querySelector('.back-button').style.display = 'none';
+                })
+                .catch(error => console.error('마이크를 사용할 수 없습니다.', error));
+        }
+
+        // 요소의 전환 애니메이션 함수
+        function smoothTransition(hideSelector, showSelector) {
+            const hideElement = document.querySelector(hideSelector);
+            const showElement = document.querySelector(showSelector);
+
+            hideElement.classList.add('fade-out');
+            setTimeout(() => {
+                hideElement.style.display = 'none';
+                showElement.style.display = 'block';
+                showElement.classList.add('fade-in');
+            }, 200);
+        }
+
+        // 녹음 일시정지 또는 정지 함수
+        function pauseOrStopRecording() {
+            if (mediaRecorder.state === "recording") {
+                mediaRecorder.stop();
+                clearTimeout(recordingTimeout);
+                console.log('녹음 중지');
+
+                // UI 상태 업데이트
+                document.querySelector('.pause-button').style.display = 'none';
+                document.querySelector('.play-button').style.display = 'block';
+                document.querySelector('.recording-message').style.display = 'none';
+                const title = document.querySelector('.title');
+                title.innerText = '録音された楽器の音をクリックして聴いてください。';
+                document.querySelector('.next-button').style.display = 'block';
+                title.classList.add('fade-in');
+                title.style.display = 'block';
+                document.getElementById('beatSample').style.display = 'none';
+                document.querySelector('.trigger-image').style.display = 'none';
+                document.getElementById('recordingInfo').style.display = 'none';
+
+                // 리셋 버튼과 메시지 보이기
+                document.querySelector('.reset-button').style.display = 'block';
+                document.querySelector('.reset-message').style.display = 'block';
+                document.querySelector('.back-button').style.display = 'none';
+            }
+        }
+
+        // 녹음 재생 함수
+        function playRecording() {
+            const audio = new Audio(audioUrl);
+            audio.play();
+            document.getElementById('beatSample').style.display = 'none';
+            document.querySelector('.trigger-image').style.display = 'none';
+        }
+
+        // 음원 재생 함수
+        function playSound(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // 박자 샘플 토글 함수
+        function toggleBeatSample() {
+            const beatSample = document.getElementById('beatSample');
+            const triggerImage = document.querySelector('.trigger-image');
+            const newImageSrc = 'static/img/꽹가리캐릭터.png';
+
+            if (triggerImage.getAttribute('src') === 'static/img/박자캐릭터_일본어.svg') {
+                triggerImage.setAttribute('src', newImageSrc);
+                triggerImage.classList.add('kkangari');
+            } else {
+                triggerImage.setAttribute('src', 'static/img/박자캐릭터_일본어.svg');
+                triggerImage.classList.remove('kkangari');
+            }
+
+            if (beatSample.classList.contains('visible')) {
+                beatSample.classList.remove('fade-in');
+                beatSample.classList.add('fade-out');
+                setTimeout(() => {
+                    beatSample.classList.remove('visible');
+                    beatSample.classList.add('hidden');
+                }, 200);
+            } else {
+                beatSample.classList.remove('hidden');
+                beatSample.classList.remove('fade-out');
+                beatSample.classList.add('visible', 'fade-in');
+            }
+        }
+
+        // 녹음 리셋 함수: 페이지 새로고침
+        function resetRecording() {
+            window.location.reload();
+        }
+    </script>
+</head>
+<body>
+    <img class="screen" src="{{ url_for('static', filename='img/배경테두리.png') }}" alt="배경 이미지">
+    <h1 class="title">合奏を作成するために楽器を演奏してください。</h1>
+    <h1 class="recording-message" style="display: none;">楽器の音が録音中です。</h1>
+    <h1 class="recording-result-message" style="display: none;">録音された楽器の音をクリックして聴いてください。</h1>
+
+    <button class="back-button" onclick="goBack()">
+        <img src="{{ url_for('static', filename='img/backbutton.png') }}" alt="뒤로가기" class="icon">
+    </button>
+
+    <button class="next-button" onclick="newFunction()" style="display: none;">
+        <img src="{{ url_for('static', filename='img/nextbutton.png') }}" alt="넘어가기" class="icon">
+    </button>
+
+    <img src="{{ url_for('static', filename='img/박자캐릭터_일본어.svg') }}" alt="박자 샘플 이미지" class="trigger-image" id="triggerImage" onclick="toggleBeatSample();">
+
+    <div class="beat-sample hidden" id="beatSample">
+        <button class="icon-button" onclick="playSound('static/audios/소고샘플1.mp3')">
+            <img src="{{ url_for('static', filename='img/playbutton.png') }}" alt="음원1" class="circle-icon">
+            <span class="sample-text">サンプル 1</span>
+        </button>
+        <button class="icon-button" onclick="playSound('static/audios/소고샘플2.mp3')">
+            <img src="{{ url_for('static', filename='img/playbutton.png') }}" alt="음원2" class="circle-icon">
+            <span class="sample-text">サンプル 2</span>
+        </button>
+        <button class="icon-button" onclick="playSound('static/audios/소고샘플3.mp3')">
+            <img src="{{ url_for('static', filename='img/playbutton.png') }}" alt="음원3" class="circle-icon">
+            <span class="sample-text">サンプル 3</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="record-button" onclick="startRecording()">
+            <img src="{{ url_for('static', filename='img/recording_icon.png') }}" alt="녹음 시작" class="record-icon">
+        </div>
+
+        <div class="pause-button" style="display: none;" onclick="pauseOrStopRecording()">
+            <img src="{{ url_for('static', filename='img/record_stop_button.png') }}" alt="일시정지" class="pause-icon">
+        </div>
+
+        <div class="play-button" style="display: none;" onclick="playRecording()">
+            <img src="{{ url_for('static', filename='img/sound_icon.png') }}" alt="재생" class="play-icon">
+        </div>
+
+        <button class="reset-button" onclick="resetRecording()" style="display: none;">もう一度演奏する。</button>
+        <div class="reset-message" style="display: none;">
+            演奏に満足していませんか？ <br> 下のボタンを押して、もう一度録音してください。
+        </div>
+    </div>
+
+    <div class="recording-info" id="recordingInfo">📢 楽器の演奏は10秒から30秒の録音のみ可能です。</div>
+</body>
+</html>

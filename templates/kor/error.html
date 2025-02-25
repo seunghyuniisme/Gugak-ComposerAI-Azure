@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오류 발생</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script>
+        function goBack() {
+            window.history.back(); // 뒤로가기 기능
+        }
+    </script>
+</head>
+<body>
+    <div class="error-container">
+        <!-- 뒤로가기 버튼 -->
+        <button class="back-button" onclick="goBack()">← 뒤로가기</button>
+        
+        <!-- 오류 메시지 -->
+        <div class="error-message">
+            <h1>오류 발생으로 접근할 수 없습니다.</h1>
+            <p>뒤로가기를 눌러서 다시 시도해 주세요.</p>
+        </div>
+    </div>
+</body>
+</html>

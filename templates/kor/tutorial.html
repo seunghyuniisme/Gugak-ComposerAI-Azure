@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>튜토리얼 화면</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tutorial.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script>
+        // 뒤로가기 버튼
+        function goBack() {
+        window.history.back();
+    }
+
+    let currentSlide = 0;
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const slides = document.querySelector('.slides');
+        const slideImages = document.querySelectorAll('.slides img, .slides .button-slide'); // 버튼 슬라이드 포함
+        const prevButton = document.querySelector('.arrow.left');
+        const nextButton = document.querySelector('.arrow.right');
+        const createButton = document.querySelector('.create-button'); // 생성 시작 버튼
+
+        // 슬라이드 위치를 업데이트하는 함수
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            prevButton.style.display = (currentSlide === 0) ? 'none' : 'block';
+            nextButton.style.display = (currentSlide === slideImages.length - 1) ? 'none' : 'block';
+            
+            // 마지막 슬라이드일 때 생성 시작 버튼을 표시
+            if (currentSlide === slideImages.length - 1) {
+                createButton.style.display = 'block';
+            } else {
+                createButton.style.display = 'none';
+            }
+        }
+
+        // 이전 슬라이드로 이동
+        prevButton.addEventListener('click', function() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlidePosition();
+            }
+        });
+
+        // 다음 슬라이드로 이동
+        nextButton.addEventListener('click', function() {
+            if (currentSlide < slideImages.length - 1) {
+                currentSlide++;
+                updateSlidePosition();
+            }
+        });
+
+        // 초기 슬라이드 위치 설정
+        updateSlidePosition();
+    });
+    </script>
+</head>
+<body>
+    <img class="screen" src="{{ url_for('static', filename='img/배경테두리.png') }}">
+    <div class="container">
+        <div class="title">튜토리얼</div> <!-- 슬라이드 컨테이너 위에 위치하는 제목 -->
+        <!-- 뒤로가기 버튼 -->
+        <button class="back-button" onclick="goBack()">
+            <img src = "{{ url_for('static', filename='img/backbutton.png') }}" alt="뒤로가기" class="back-icon">
+        </button>
+
+        <div class="slider-container">
+            <button class="arrow left">
+                <img src="{{ url_for('static', filename='img/backbutton.png') }}" alt="이전 슬라이드" class="slide-arrow">
+            </button>
+            <div class="slides">
+                <img src="{{ url_for('static', filename='img/녹음시작_kor.png') }}" alt='슬라이드 1'>
+                <img src="{{ url_for('static', filename='img/녹음중1_kor.png') }}"  alt='슬라이드 2'>
+                <img src="{{ url_for('static', filename='img/녹음중2_kor.png') }}"  alt='슬라이드 3'>
+                <img src="{{ url_for('static', filename='img/녹음재생1_kor.png') }}"  alt='슬라이드 4'>
+                <img src="{{ url_for('static', filename='img/녹음재생2_kor.png') }}"  alt='슬라이드 5'>
+                <img src="{{ url_for('static', filename='img/녹음재생3_kor.png') }}"  alt='슬라이드 6'>
+                <img src="{{ url_for('static', filename='img/tutorial3.png') }}"  alt='슬라이드 7'>
+            </div>
+            <button class="arrow right">
+                <img src="{{ url_for('static', filename='img/backbutton.png') }}" alt="다음 슬라이드" class="slide-arrow">
+            </button>
+
+            <a href="{{ url_for('compose_start') }}" class="create-button-wrapper">
+                <button class="create-button">연주 시작하기</button>
+            </a> 
+        </div>
+        
+        <!-- 전통악기 알아보기 버튼 -->
+        <a href="{{ url_for('instrument') }}">
+        <button class="info-button">전통악기 알아보기</button>
+        </a>
+
+
+    </div>
+</body>
+</html>

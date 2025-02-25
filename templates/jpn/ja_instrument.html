@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국악기 소개</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/instrument.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <img class="screen" src="{{ url_for('static', filename='img/배경테두리.png') }}" alt="배경 테두리">
+
+    <div class="container">
+        <h1>韓国の楽器</h1>
+        <p class="firstment">🎧楽器を押すと、楽器の説明を見て、演奏される音を聞くことができます。</p>
+    
+        <div class="instrument-list">
+            <div class="instrument instrument1" onclick="showModal('sogo')">
+                <img src="{{ url_for('static', filename='img/sogo.png') }}" alt="소고">
+                <p>ソゴ(소고)</p>
+            </div>
+            <div class="instrument instrument2" onclick="showModal('gayageum')">
+                <img src="{{ url_for('static', filename='img/gayageum.png') }}" alt="가야금">
+                <p>カヤグム(가야금)</p>
+            </div>
+            <div class="instrument instrument3" onclick="showModal('jing')">
+                <img src="{{ url_for('static', filename='img/jing.png') }}" alt="징">
+                <p>チン(징)</p>
+            </div>
+            <div class="instrument instrument4" onclick="showModal('haegeum')">
+                <img src="{{ url_for('static', filename='img/haegeum.png') }}" alt="해금">
+                <p>ヘグム(해금)</p>
+            </div>
+            <div class="instrument instrument5" onclick="showModal('kkwaenggwari')">
+                <img src="{{ url_for('static', filename='img/kkwaenggwari.png') }}" alt="꽹과리">
+                <p>クェンガリ(꽹과리)</p>
+            </div>
+        </div>
+
+        <button class="back-button" onclick="goBack()">
+            <img src="{{ url_for('static', filename='img/backbutton.png') }}" alt="뒤로가기" class="back-icon">
+        </button>
+
+        <a href="{{ url_for('ja_compose_start') }}">
+            <button class="start-button">
+                <img src="{{ url_for('static', filename='img/recording_icon.png') }}" alt="합주 생성" class="start-button-img">
+                <span class="small-text">音楽を作成する</span>
+            </button>
+        </a>
+    </div>
+
+    <!-- Modal -->
+    <div id="instrumentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+                
+                <div class="modal-text">
+                    <h2 id="instrumentTitle">楽器名</h2>
+                    <p id="instrumentDescription">楽器の説明がここに表示されます。</p>
+                </div>
+                
+                <div class="modal-media">
+                    <img id="instrumentImage1" src="" alt="악기 이미지1" style="max-width:90%; height:auto;">
+                    <img id="instrumentImage2" src="" alt="악기 이미지2" style="max-width:90%; height:auto;">
+                </div>
+
+                <audio id="instrumentAudio" controls style="width:100%; margin-top:10px;"></audio>
+                
+            </div>
+            <button class="close-button" onclick="closeModal()">
+                <img src="{{ url_for('static', filename='img/x_button.png') }}" alt="닫기 버튼">
+            </button>
+            
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/ja_instrument.js') }}"></script>
+
+</body>
+</html>

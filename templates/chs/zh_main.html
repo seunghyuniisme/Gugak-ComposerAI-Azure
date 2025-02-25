@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>덩기덕쿵더러러러</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <script>
+        function toggleLanguageOptions() {
+            var languageOptions = document.getElementById('language-options');
+            languageOptions.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+    <img class="screen" src="{{ url_for('static', filename='img/배경테두리.png') }}">
+    <div class="container">
+        <h1>哈 莫 耶<br> 하 모 예<br></h1>
+
+        <a href="{{ url_for('zh_tutorial') }}">
+            <button class="start">开始</button>
+        </a>
+        <img class="image-right1" src="{{ url_for('static', filename='img/꽹가리캐릭터.png') }}" alt="오른쪽 이미지" width="200">
+        <img class="image-right2" src="{{ url_for('static', filename='img/가야금캐릭터.png') }}" alt="왼쪽 이미지" width="200">
+        <!-- 한국어 아이콘 (항상 보임) -->
+        <div class="language-select">
+            <div class="language-option" onclick="toggleLanguageOptions()">
+                <img src="{{ url_for('static', filename='img/중국어.png') }}" alt="中國語" class="circle-image-large">
+                <p>中國語</p>
+            </div>
+        </div>
+
+        <!-- 숨겨진 언어 옵션들 (클릭 시 나타남) -->
+        <div id="language-options" class="language-options">
+            <div class="language-option">
+                <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='img/한국어.png') }}" alt="한국어" class="circle-image-large">
+                </a>
+                <p>한국어</p>
+            </div>
+            <div class="language-option">
+                <a href="{{ url_for('en_home') }}">
+                <img src="{{ url_for('static', filename='img/영어.png') }}" alt="English" class="circle-image-large">
+                </a>
+                <p>English</p>
+            </div>
+            <div class="language-option">
+                <a href="{{ url_for('ja_home') }}">
+                <img src="{{ url_for('static', filename='img/일본어.png') }}" alt="日本語" class="circle-image-large">
+                </a>
+                <p>日本語</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
